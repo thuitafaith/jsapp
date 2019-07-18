@@ -1,0 +1,5 @@
+.budget-form {
+  border: 0.15rem solid var(--mainGreen);
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
