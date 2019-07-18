@@ -11,3 +11,6 @@
 #expense-form{
     float: right;
 }
+#budget-form{
+    float: left;
+}
