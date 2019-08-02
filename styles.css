@@ -4,3 +4,13 @@
 #expense-submit{
     background-color: aqua;
 }
+#budget-section{
+    border: 1px solid gainsboro;
+    border-radius: 12px;
+}
+/* #expense-form{
+    float: right;
+} */
+/* #budget-form{
+    float: left;
+} */
