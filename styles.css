@@ -8,9 +8,10 @@
     border: 1px solid gainsboro;
     border-radius: 12px;
 }
-/* #expense-form{
-    float: right;
-} */
-/* #budget-form{
-    float: left;
-} */
+.budget-feedback,
+.expense-feedback{
+    display: none;
+}
+.showItem{
+    display: block;
+}
