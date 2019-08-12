@@ -16,18 +16,19 @@ class UI {
         this.itemID = 0;
     }
     displayBudget(){
-    //     const value = this.budgetInput.value;
-    //     if (value === "" || value < 0){
-    //        this.budgetFeedback.classList.add("showItem");
-    //        this.budgetFeedback.innerHTML = `<p>value cannot be empty or negative</p>`;
+        const value = this.budgetInput.value;
+        if (value === "" || value < 0){
+           this.budgetFeedback.classList.add("showItem");
+           this.budgetFeedback.innerHTML = `<p>value cannot be empty or negative</p>`;
 
-    //     }else{
-    //         this.budgetAmount.textContent=value;
+        }else{
+            this.budgetAmount.textContent=value;
 
 
-    //     }
-    // }
-    console.log("are you working?")
+        }
+        // console.log("are you working?")
+    }
+    
 }
 function eventListeners(){
     const budgetForm = document.getElementById("budget-form");
