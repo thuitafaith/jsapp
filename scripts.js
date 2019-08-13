@@ -39,6 +39,10 @@ class UI {
         }
 
     }
+    calculateTotal(){
+       const total = this.budgetAmount.textContent - this.expenseAmount.textContent;
+       return this.balanceAmount.textContent= total;
+    }
 }
 function eventListeners(){
     const budgetForm = document.getElementById("budget-form");
