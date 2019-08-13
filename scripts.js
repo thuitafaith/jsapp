@@ -28,11 +28,21 @@ class UI {
         }
         // console.log("are you working?")
     }
-    
+    calculateExpense(){
+        const expeInput = this.amountInput.value;
+        if (expeInput === "" || expeInput < 0){
+            this.expenseFeedback.classList.add("showItem");
+            this.expenseFeedback.innerHTML = `<p>value cannot be empty or negative</p>`;
+
+        }else{
+            this.expenseAmount.textContent = expeInput;
+        }
+
+    }
 }
 function eventListeners(){
     const budgetForm = document.getElementById("budget-form");
-
+    const expenseForm = document.getElementById("expense-form")
     // create new instance of UI
     const ui = new UI();
     // budget form submit
@@ -40,6 +50,10 @@ function eventListeners(){
         event.preventDefault();
         ui.displayBudget();
     });
+    expenseForm.addEventListener("submit", function(event){
+        event.preventDefault();
+        ui.calculateExpense();
+    })
 }
 document.addEventListener('DOMContentLoaded',function(){
     eventListeners();
