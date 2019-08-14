@@ -2,13 +2,13 @@ class UI {
     constructor() {
         this.budgetFeedback = document.querySelector(".budget-feedback");
         this.expenseFeedback = document.querySelector(".expense-feedback");
-        this.budgetForm = document.getElementById("budget-form");
+        this.budgetForm = document.getElementById("budget-form").reset();
         this.budgetInput = document.getElementById("budget-input");
         this.budgetAmount = document.getElementById("budget-amount");
         this.expenseAmount = document.getElementById("expense-amount");
         this.balance = document.getElementById("balance");
         this.balanceAmount = document.getElementById("balance-amount");
-        this.expenseForm = document.getElementById("expense-form");
+        this.expenseForm = document.getElementById("expense-form").reset();
         this.expenseInput = document.getElementById("expense-input");
         this.amountInput = document.getElementById("amount-input");
         this.expenseList = document.getElementById("expense-list");
@@ -49,7 +49,7 @@ function eventListeners(){
     const expenseForm = document.getElementById("expense-form")
     // create new instance of UI
     const ui = new UI();
-    // budget form submit
+    // budget form ff
     budgetForm.addEventListener("submit",function(event){
         event.preventDefault();
         ui.displayBudget();
@@ -57,6 +57,9 @@ function eventListeners(){
     expenseForm.addEventListener("submit", function(event){
         event.preventDefault();
         ui.calculateExpense();
+    })
+    expenseForm.addEventListener("click",function(){
+        ui.calculateTotal()
     })
 }
 document.addEventListener('DOMContentLoaded',function(){
